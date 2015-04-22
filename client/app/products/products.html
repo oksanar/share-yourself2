@@ -1,0 +1,155 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<section id="feature" class="transparent-bg">
+    <div class="container">
+        <h1 ng-bind="title"></h1>
+        <div class="input-group" ng-if="isAdmin()">
+            <button class="btn btn-sm glyphicon glyphicon-plus" ng-click="add()"></button>
+        </div>
+        <div class="products-ctnr" ng-if="products !== 'undefined'">
+            <div class="products-list"  ng-repeat="products_item in products" >
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 id="panel-{{$index}}" class="panel-title" ng-bind="products_item.title"></h3>
+                    </div>
+                    <div class="panel-body" ng-bind="products_item.body"></div>
+                    <div class="date" ><span>Create date: </span><span ng-bind="products_item.create_date"></span></div>
+                    <div class="input-group" ng-if="isAdmin()">
+                        <button  class="btn btn-sm glyphicon glyphicon-edit" ng-click="edit(products_item._id)"></button>
+                        <button class="btn btn-sm glyphicon glyphicon-minus" ng-click="remove(products_item._id)"></button>
+                    <span ng-if="$index !==0">
+                          <a href="#" smooth-scroll offset="120"  duration="800" easing="easeInQuint"  scroll-to="panel-{{$index - 1}}">Up</a>
+                    </span>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="center wow fadeInDown">
+            <h2>Our Services</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+        </div>
+
+        <div class="row">
+            <div class="features">
+                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="feature-wrap">
+                        <i class="fa fa-bullhorn"></i>
+                        <h2>Fresh and Clean</h2>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="feature-wrap">
+                        <i class="fa fa-comments"></i>
+                        <h2>Retina ready</h2>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="feature-wrap">
+                        <i class="fa fa-cloud-download"></i>
+                        <h2>Easy to customize</h2>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="feature-wrap">
+                        <i class="fa fa-leaf"></i>
+                        <h2>Adipisicing elit</h2>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="feature-wrap">
+                        <i class="fa fa-cogs"></i>
+                        <h2>Sed do eiusmod</h2>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                    </div>
+                </div><!--/.col-md-4-->
+
+                <div class="col-md-4 col-sm-6 wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
+                    <div class="feature-wrap">
+                        <i class="fa fa-heart"></i>
+                        <h2>Labore et dolore</h2>
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+                    </div>
+                </div><!--/.col-md-4-->
+            </div><!--/.services-->
+        </div><!--/.row-->
+
+
+        <div class="get-started center wow fadeInDown">
+            <h2>Ready to get started</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore  magna aliqua. <br>  Ut enim ad minim veniam,quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</p>
+            <div class="request">
+                <h4><a href="#">Request a free Quote</a></h4>
+            </div>
+        </div><!--/.get-started-->
+
+        <div class="clients-area center wow fadeInDown">
+            <h2>What our client says</h2>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut <br> et dolore magna aliqua. Ut enim ad minim veniam</p>
+        </div>
+
+        <div class="row">
+            <div class="col-md-4 wow fadeInDown">
+                <div class="clients-comments text-center">
+                    <img src="images/client1.png" class="img-circle" alt="">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
+                    <h4><span>-John Doe /</span>  Director of corlate.com</h4>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeInDown">
+                <div class="clients-comments text-center">
+                    <img src="images/client2.png" class="img-circle" alt="">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
+                    <h4><span>-John Doe /</span>  Director of corlate.com</h4>
+                </div>
+            </div>
+            <div class="col-md-4 wow fadeInDown">
+                <div class="clients-comments text-center">
+                    <img src="images/client3.png" class="img-circle" alt="">
+                    <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</h3>
+                    <h4><span>-John Doe /</span>  Director of corlate.com</h4>
+                </div>
+            </div>
+        </div>
+
+    </div><!--/.container-->
+</section><!--/#feature-->
+
+    <!--<div id="ctrl-as-exmpl" ng-controller="SettingsController1 as settings">-->
+        <!--Name: <input type="text" ng-model="settings.name"/>-->
+        <!--[ <a href="" ng-click="settings.greet()">greet</a> ]<br/>-->
+        <!--Contact:-->
+        <!--<ul>-->
+            <!--<li ng-repeat="contact in settings.contacts">-->
+                <!--<select ng-model="contact.type">-->
+                    <!--<option>phone</option>-->
+                    <!--<option>email</option>-->
+                <!--</select>-->
+                <!--<input type="text" ng-model="contact.value"/>-->
+                <!--[ <a href="" ng-click="settings.clearContact(contact)">clear</a>-->
+                <!--| <a href="" ng-click="settings.removeContact(contact)">X</a> ]-->
+            <!--</li>-->
+            <!--<li>[ <a href="" ng-click="settings.addContact()">add</a> ]</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--<ul class="pagination pagination-small">-->
+        <!--<li><a href="#">&laquo;</a></li>-->
+        <!--<li><a href="#">1</a></li>-->
+        <!--<li><a href="#">2</a></li>-->
+        <!--<li><a href="#">3</a></li>-->
+        <!--<li><a href="#">&raquo;</a></li>-->
+    <!--</ul>-->
+</div>
+<div ng-include="'components/footer/footer.html'"></div>
+
+
+
+
